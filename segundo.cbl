@@ -13,7 +13,7 @@
        01  NUM1 PIC 999.
        01  NUM2 PIC 999.
        01  MENU PIC 9.
-       01  ALMACENA PIC 99999.
+       01  ALMACENA PIC ZZZZ9.
        PROCEDURE DIVISION.
        MAIN-PROCEDURE.
        RUTINA1.
@@ -23,20 +23,22 @@
             ACCEPT NUM2.
             DISPLAY "1=SUMA/2=RESTA/3=MULTIPLICA/4=DIVIDE/9=SALE".
             ACCEPT MENU.
-            IF MENU = 1
+            EVALUATE TRUE
+            WHEN MENU = 1
                ADD NUM1 TO NUM2 GIVING ALMACENA
-               DISPLAY "SUMA :" ALMACENA.
-            IF MENU = 2
+               DISPLAY "SUMA :" ALMACENA
+            WHEN MENU = 2
                SUBTRACT NUM1 FROM NUM2 GIVING ALMACENA
-               DISPLAY "RESTA :" ALMACENA.
-            IF MENU = 3
+               DISPLAY "RESTA :" ALMACENA
+           WHEN MENU = 3
                MULTIPLY NUM1 BY NUM2 GIVING ALMACENA
-               DISPLAY "MULTIPLICA :" ALMACENA.
-            IF MENU = 4
+               DISPLAY "MULTIPLICA :" ALMACENA
+            WHEN MENU = 4
                DIVIDE NUM1 BY NUM2 GIVING ALMACENA
-               DISPLAY "DIVIDE :" ALMACENA.
-            IF MENU = 9
-                PERFORM RUTINA-SALIDA.
+               DISPLAY "DIVIDE :" ALMACENA
+            WHEN MENU = 9
+                PERFORM RUTINA-SALIDA
+            END-EVALUATE.
             PERFORM RUTINA1.
        RUTINA-SALIDA.
             STOP RUN.
