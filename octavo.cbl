@@ -8,8 +8,10 @@
       *            CARACTERES CHAR
                   SYMBOLIC CHARACTERS ESPACIO IS 33.
                   SYMBOLIC CHARACTERS LETRA-A IS 66.
-                  SYMBOLIC CHARACTERS DERECHA IS 176.
-                  SYMBOLIC CHARACTERS IZQUIERDA IS 175.
+                  SYMBOLIC CHARACTERS DERECHA ARE 176
+                                       IZQUIERDA 175.
+                  SYMBOLIC CHARACTERS MEDIO CUARTO TRES-CUARTOS
+                                  ARE  172    173      244.
 
        DATA DIVISION.
        FILE SECTION.
@@ -19,5 +21,8 @@
             DISPLAY ESPACIO.
             DISPLAY IZQUIERDA ESPACIO LETRA-A
                ESPACIO DERECHA.
+            DISPLAY MEDIO.
+            DISPLAY CUARTO.
+            DISPLAY TRES-CUARTOS.
             STOP RUN.
        END PROGRAM NUEVO-SUB.
