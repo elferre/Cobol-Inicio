@@ -3,6 +3,7 @@
       * Date: 20/3/24
       * Purpose:
       * Tectonics: cobc
+      * PERFORM = GO SUB
       ******************************************************************
        IDENTIFICATION DIVISION.
        PROGRAM-ID. SEGUNDO-PROGRAM-NAME.
