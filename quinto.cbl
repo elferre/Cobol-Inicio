@@ -9,6 +9,11 @@
        DATA DIVISION.
        FILE SECTION.
        WORKING-STORAGE SECTION.
+       01 VARIABLE.
+           07 VAR1 PIC 9 VALUE 7.
+           07 VAR11 PIC XX VALUE "NO".
+           07 VAR2 PIC 9 VALUE 2.
+           07 VAR3 PIC 9 VALUE 1.
        01 NUM1 PIC 99V99.
        01 NUM2 PIC S99V99.
        PROCEDURE DIVISION.
@@ -19,5 +24,8 @@
             DISPLAY NUM2.
             MOVE -25.08 TO NUM2.
             DISPLAY NUM2.
+            DISPLAY VARIABLE.
+            DISPLAY VAR1.
+
             STOP RUN.
        END PROGRAM YOUR-PROGRAM-QUINTO.
